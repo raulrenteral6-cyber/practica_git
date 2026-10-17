@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Página sencilla para practicar comandos y flujo de trabajo en Git: Tecnologías y Lenguajes.">
+    <title>DevHub - Tecnologías y Lenguajes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="badge-git">🚀 Proyecto de Práctica Git</div>
+            <h1 class="title">Tecnologías & Lenguajes</h1>
+            <p class="subtitle">Explora herramientas de desarrollo y practica ramas, commits y merges en Git agregando
+                nuevas tarjetas.</p>
+        </header>
+
+        <!-- Controls: Filtros y Buscador -->
+        <section class="controls" aria-label="Filtros y búsqueda">
+            <div class="search-box">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Buscar por nombre, categoría o etiqueta..."
+                    aria-label="Buscar elementos">
+            </div>
+
+            <nav class="filter-tabs" aria-label="Filtrar por tipo">
+                <button class="tab-btn active" data-filter="all" id="filter-all">Todos <span class="counter"
+                        id="count-all">0</span></button>
+                <button class="tab-btn" data-filter="lenguaje" id="filter-lenguaje">Lenguajes <span class="counter"
+                        id="count-lenguajes">0</span></button>
+                <button class="tab-btn" data-filter="tecnologia" id="filter-tecnologia">Tecnologías <span
+                        class="counter" id="count-tecnologias">0</span></button>
+            </nav>
+        </section>
+
+        <!-- Main Content Grid -->
+        <main class="content-section">
+            <div id="cardsGrid" class="cards-grid">
+                <!-- Renderizado dinámicamente mediante app.js -->
+            </div>
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <p>No se encontraron resultados para tu búsqueda.</p>
+            </div>
+        </main>
+
+        <!-- Sección de Ejercicios Git -->
+        <section class="git-guide">
+            <h2>💡 Ideas para practicar Git con este proyecto:</h2>
+            <ol class="git-steps">
+                <li><strong>Crear una rama:</strong> <code>git checkout -b feature/nuevo-lenguaje</code></li>
+                <li><strong>Editar:</strong> Agrega un nuevo elemento en el arreglo <code>items</code> dentro de
+                    <code>js/app.js</code></li>
+                <li><strong>Guardar y commitear:</strong> <code>git commit -am "feat: agregar lenguaje Kotlin"</code>
+                </li>
+                <li><strong>Merge:</strong> Vuelve a <code>main</code> e integra tus cambios con
+                    <code>git merge feature/nuevo-lenguaje</code></li>
+            </ol>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Entorno de práctica de Git &bull; Código abierto y editable</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
